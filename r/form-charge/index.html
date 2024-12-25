@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refund Request</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Link para FontAwesome -->
+</head>
+<body>
+
+    <div class="module">
+        <!-- Module Title -->
+        <h1>Refund Request</h1>
+
+        <!-- Content with Title and Description -->
+        <div class="module-content">
+            <h2>Request Form</h2>
+            <p>If you encountered any issues with the product or are not satisfied with your purchase, please use the form below to request a refund process. We are committed to ensuring your satisfaction and resolving any issues as best as possible.</p>
+        </div>
+
+        <!-- Refund and Chargeback Form -->
+        <form id="refund-chargeback-form" action="javascript:void(0);">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required="">
+
+            <label for="email">Registration Email:</label>
+            <input type="email" id="email" name="email" required="">
+
+            <label for="reason">Reason for Request:</label>
+            <textarea id="reason" name="reason" rows="4" required=""></textarea>
+
+            <label for="type">Type of Request:</label>
+            <select id="type" name="type" required="">
+                <option value="refund">Refund</option>
+            </select>
+
+            <button type="submit" id="submitBtn">Submit Request</button>
+        </form>
+
+        <!-- Footer -->
+        <div class="footer">
+            
+        </div>
+    </div>
+
+    <!-- Pop-up Box (Loading) -->
+    <div id="popup" class="popup-overlay">
+        <div class="popup-content">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Processing your request...</p>
+        </div>
+    </div>
+
+    <!-- Pop-up Box (Confirmation) -->
+    <div id="confirmation-popup" class="popup-overlay">
+        <div class="popup-content">
+            <i class="fas fa-check-circle"></i>
+            <p>Your refund request has been sent. You will receive the refund in your bank account with the registered card within 7 days. Thank you!</p>
+            <button id="exit-btn">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
